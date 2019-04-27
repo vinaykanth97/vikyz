@@ -1,0 +1,212 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow($boxs) {
+	-webkit-box-shadow: $boxs;
+	-moz-box-shadow: $boxs;
+	-ms-box-shadow: $boxs;
+	box-shadow: $boxs;
+}
+
+@mixin transition($trans) {
+	-webkit-transition: $trans;
+	-moz-transition: $trans;
+	-ms-transition: $trans;
+	transition: $trans;
+}
+
+@mixin transform($trans) {
+	-webkit-transform: $trans;
+	-moz-transform: $trans;
+	-ms-transform: $trans;
+	transform: $trans;
+}
+
+@mixin transition-duration($transdur) {
+	-webkit-transition-duration: $transdur;
+	-moz-transition-duration: $transdur;
+	-ms-transition-duration: $transdur;
+	transition-duration: $transdur;
+}
+
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content
+	}
+	&:-moz-placeholder {
+		@content
+	}
+	&::-moz-placeholder {
+		@content
+	}
+	&:-ms-input-placeholder {
+		@content
+	}
+}
+
+@mixin rotate($degrees) {
+	-webkit-transform: rotate($degrees);
+	-moz-transform: rotate($degrees);
+	-ms-transform: rotate($degrees);
+	-o-transform: rotate($degrees);
+	transform: rotate($degrees);
+}
+
+@mixin display-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-wrap-wrap{
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@mixin align-items-center{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+@mixin align-items-left{
+    -webkit-box-align: left;
+    -ms-flex-align: left;
+    align-items: left;
+}
+@mixin align-items-end{
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+@mixin align-items-baseline{
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+@mixin align-items-start{
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+@mixin align-items-self-start{
+    -webkit-box-align: self-start;
+    -ms-flex-align: self-start;
+    align-items: self-start;
+}
+
+@mixin object-fit($cover){
+    -o-object-fit: $cover;
+    object-fit: $cover;
+}
+
+
+$desktop-width: 1200px;
+$tablet-landscape-width: 1024px;
+$tablet-min-width: 768px;
+$tablet-max-width7: 768px;
+$medium-device-min-width: 992px;
+$tablet-max-width: 991px;
+$mobile-max-width: 767px;
+$ip-width: 320px;
+$mobile-min-land:480px;
+$mobile-max-land:767px;
+$mobile-width: 648px;
+$screen-lg16: 1600px;
+$screen-lg14: 1600px;
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+@mixin tablettoggle {
+	@media (max-width: #{$tablet-max-width}) and (min-width: #{$tablet-min-width}) {
+		@content;
+	}
+}
+
+@mixin tabletpro {
+	@media (max-width: #{$tablet-landscape-width}) {
+		@content;
+	}
+}
+
+@mixin tabletmin {
+	@media (min-width: #{$medium-device-min-width}) {
+		@content;
+	}
+}
+
+@mixin smalltabletmin {
+	@media (min-width: #{$tablet-min-width}) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (max-width: #{$tablet-max-width7}) {
+		@content;
+	}
+}
+
+@mixin tabletmax {
+	@media (max-width: #{$tablet-max-width}) {
+		@content;
+	}
+}
+
+@mixin mobilemax {
+	@media (max-width: #{$mobile-max-width}) {
+		@content;
+	}
+}
+@mixin mobile {
+	@media (max-width: #{$mobile-width}) {
+		@content;
+	}
+}
+@mixin ipmax {
+	@media (max-width: #{$ip-width}) {
+		@content;
+	}
+}
+
+@mixin screenlgm {
+	@media (max-width: #{$screen-lg16}) and (min-width: #{$screen-lg14}) {
+		@content;
+	}
+}
+
+
+@mixin container {
+	width: 70vw;
+	margin: 0 auto;
+	@include tabletmax {
+		width: 100%;
+	}
+}
+
+@mixin blue-gradient{
+	background-color: #1a94d1;
+    background: -webkit-gradient(linear, left top, right top, from(#1a94d1), to(#0abcf1));
+    background: -webkit-linear-gradient(left, #1a94d1, #0abcf1);
+    background: -o-linear-gradient(left, #1a94d1, #0abcf1);
+    background: linear-gradient(to right, #1a94d1, #0abcf1);
+}
+@mixin blue-red-gradient{
+	background: -webkit-gradient(linear, left top, right top, from(rgba(0, 152, 219, 0.92)), to(rgba(226, 128, 130, 0.9)));
+    background: -webkit-linear-gradient(left, rgba(0, 152, 219, 0.92), rgba(226, 128, 130, 0.9));
+    background: -o-linear-gradient(left, rgba(0, 152, 219, 0.92), rgba(226, 128, 130, 0.9));
+    background: linear-gradient(to right, rgba(0, 152, 219, 0.92), rgba(226, 128, 130, 0.9));
+} 
+@mixin flex-direction{
+	-webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+}

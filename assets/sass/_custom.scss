@@ -1,0 +1,27 @@
+/*Scroll Top*/
+.scroll-top{
+    position: fixed;
+    bottom:23%;
+    right:0;
+    z-index: 22;
+    img{
+        cursor: pointer;
+    }
+    p{
+        margin:0;
+        transform: translate(-32px,-53px)rotate(-90deg);
+    }
+}
+.hov-top{
+    opacity: 0;
+}
+.top-img:hover .top{
+   opacity:0;
+}
+.top-img:hover .hov-top{
+opacity:1;
+position: absolute;
+left: 0%;
+
+}
+/*Scroll Top*/

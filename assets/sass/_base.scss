@@ -1,0 +1,816 @@
+/***
+=================================================================
+Base CSS for this theme.
+Basic style for this theme exists in this file.
+=================================================================
+***/
+
+@import "mixin";
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
+
+
+html {
+  //font-family: $font-base;
+  font-family: $font-base;
+  font-size: 14px;
+  font-size: 1vw;
+  line-height: 1.6;
+
+  @include tabletmax {
+    font-size: 14px;
+  }
+}
+
+body {
+  background: transparent;
+  //font-family: $font-base;
+  font-family: $font-base;
+  color: $basetext;
+  font-size: 1rem;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+p {
+  margin: 0 0 1.2rem 0;
+  font-family: $font-base;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.6625rem;
+
+}
+
+a p {
+  color: #303030;
+}
+
+.tags {
+  color: #303030;
+}
+
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+  margin-top: 1.429rem;
+  /* 20 */
+  margin-bottom: 0.7143rem;
+  /* 10 */
+  font-weight: 300;
+  line-height: 1.2;
+  color:#3b3b3b;
+}
+
+.h4,
+.h5,
+.h6,
+h4,
+h5,
+h6 {
+  margin-top: 0.7143rem;
+  /* 10 */
+  margin-bottom: 0.7143rem;
+  /* 10 */
+  font-weight: 600;
+}
+
+h1,
+.h1 {
+  font-size: 3.8rem;
+  
+  @include mobilemax {
+    font-size: 2rem;
+  }
+}
+
+h2,
+.h2 {
+
+  font-size: 2.1875rem;
+  font-weight: 300;
+
+  @include mobilemax {
+    font-size: 1.8rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 1.9rem;
+
+  @include mobilemax {
+    font-size: 1.6rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.286rem;
+
+  @include mobilemax {
+    font-size: 1.15rem;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+}
+
+h6,
+.h6 {
+  font-size: 0.8571rem;
+}
+
+
+ul,
+ol {
+  margin-bottom: 1.2rem;
+  padding-left: 0;
+  list-style-position: inside;
+  line-height: 1.6;
+}
+
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border-top: 0.073rem solid #c7c7c7;
+}
+
+pre {
+  font-family: $font-base;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+code,
+kbd,
+samp {
+  font-family: $font-base;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25rem;
+}
+
+sup {
+  top: -0.5rem;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+  outline: none;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -0.1429rem;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.list-inline>li {
+  padding-right: 0.3571rem;
+  padding-left: 0.3571rem;
+  display: inline;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: #3b3b3b;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color:#3b3b3b;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  border: 0.071rem solid;
+  padding: 0.6rem;
+}
+
+table tr:hover {
+  background-color: transparent;
+}
+
+table th {
+  padding-top: 0.143rem;
+  padding-bottom: 0.143rem;
+  text-align: left;
+}
+
+.table-responsive {
+  border-top: 0.071rem solid #ddd;
+}
+
+.table .theading th {
+  text-align: center;
+}
+
+/*** bootstrap overwrite classes starts ***/
+
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+  min-height: 0.07143rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+}
+
+.container-fluid {
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+}
+
+.row {
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+}
+
+.container {
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  @include container;
+}
+
+picture {
+  display: block;
+}
+
+.btn {
+  min-width: 7rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 1rem;
+  border: 0.07143rem solid $blue;
+  border-radius: 1.714rem;
+  color: $white;
+  box-shadow: none;
+  background: $blue;
+  transition: background 0.2s ease-in-out 0s, border 0.5s ease-in-out 0s, color 0.5s ease-in-out 0s;
+  -moz-transition: background 0.2s ease-in-out 0s, border 0.5s ease-in-out 0s, color 0.5s ease-in-out 0s;
+  -webkit-transition: background 0.2s ease-in-out 0s, border 0.5s ease-in-out 0s, color 0.5s ease-in-out 0s;
+  -o-transition: background 0.2s ease-in-out 0s, border 0.5s ease-in-out 0s, color 0.5s ease-in-out 0s;
+  outline: 0;
+
+  &:hover,
+  &:focus {
+    color: $black;
+    background: transparent;
+    border: 0.07143rem solid $blue;
+    outline: 0;
+  }
+
+  &:active {
+    outline: 0;
+    outline-offset: 0;
+  }
+
+  &.block {
+    min-width: 13rem;
+  }
+}
+
+.blue-button {
+  @extend .btn;
+}
+
+.btn-default:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.form-control {
+  height: 2.429rem;
+  padding: 0;
+  font-size: 1rem;
+  color: #555;
+  background-color: transparent;
+  border: 0 solid #ccc;
+  border-bottom: 0.07143rem solid #eaeaea;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control:focus,
+.form-control.error {
+  border-color: $blue;
+  -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, .075), 0 0 0 rgba(102, 175, 233, .6);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075), 0 0 0 rgba(102, 175, 233, .6);
+}
+
+label {
+  margin-bottom: 0.3571rem;
+  font-weight: normal;
+}
+
+/*** bootstrap overwrite classes starts ***/
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  @include mobilemax {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.blue-clr {
+  color: $blue;
+}
+
+.sec-bg {
+  background: #fafafa;
+}
+
+.sub-title {
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+  z-index: 9;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.slick-prev,
+.slick-prev:hover,
+.slick-prev:focus {
+  background: url(../images/homepage/left-arrow.png) no-repeat center;
+  background-size: 1.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 105%;
+  left:90%;
+  object-fit: cover;
+}
+
+.slick-next,
+.slick-next:hover,
+.slick-next:focus {
+  background: url(../images/homepage/right-arrow.png) no-repeat center;
+  background-size: 1.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 105%;
+  left: 100%;
+  object-fit: cover;
+}
+
+label.error {
+  color: red;
+}
+
+.res-img {
+  @include mobilemax {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+
+  }
+}
+
+br {
+  @include mobilemax {
+    display: none;
+
+  }
+}
+
+
+.space {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.espace {
+  padding: 1rem;
+}
+
+.sspace2 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.pt1 {
+  padding-top: 1rem;
+}
+
+.pt2 {
+  padding-top: 2rem;
+}
+
+.pt3 {
+  padding-top: 3rem;
+}
+
+.pt4 {
+  padding-top: 4rem;
+}
+
+.pt4 {
+  padding-top: 4rem;
+}
+.ptb-1{
+  padding:1em 0;
+}
+body.admin-menu {
+  margin-top: 5.6rem !important;
+
+  .header {
+    top: 1.6rem;
+  }
+}
+
+.page-content .content-inner-body {
+
+  ul,
+  ol {
+    padding-left: 0.8rem;
+    list-style: none;
+
+    @include mobilemax {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      background: url(../images/icons/arrow-right.svg) no-repeat left top;
+      background-size: 0.9rem;
+      background-position: 0 0.2rem;
+      padding-left: 1.3rem;
+      margin-bottom: 0.2rem;
+      color: #5d5d5d;
+      margin: 0 0 1.2rem 0;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.125rem;
+      font-weight: 300;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.caret {
+  margin-left: 0.1429rem;
+  border-top: 0.3.5rem dashed;
+  border-right: 0.3.5rem solid transparent;
+  border-left: 0.3.5rem solid transparent;
+}
+
+.modal {
+  .modal-dialog {
+    width: 80%;
+
+    @include tabletmax {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include mobilemax {
+      width: 90%;
+    }
+  }
+
+  .modal-content {
+    background: #191919;
+    border-radius: 0;
+  }
+}
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, .82);
+}
+
+.modal-backdrop.in {
+  opacity: 1;
+}
+
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus {
+  background-color: transparent;
+}
+/*Load more btn*/
+.ld-mr,
+.ld-mr:focus {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20.39px;
+  color: #fff;
+  background: #3b3b3b;
+  padding: 0.9rem 4.33rem;
+  display: inline-block;
+  border: 1px solid transparent;
+
+  &:hover,
+  &:visited,
+    {
+    color: #000;
+    background: #fff;
+    transition: all ease 1s;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    border: 1px solid #000;
+  }
+}
+.ld-mr{
+  transition: 0.7s all ease-in-out;
+  margin-bottom:3rem;
+}
+/*Footer*/
+.footer {
+  padding:2rem 0;
+  small {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #000;
+  }
+  li{
+    padding:0 1em;
+    a{
+      font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #000;
+    }
+  }
+  p{
+  margin:0;
+  }
+  ul{
+    margin:0;
+  }
+  .row{
+    margin:0;
+  }
+  background:#e6e6e6;
+}
+/*Footer*/
+.sec-space{
+  padding: 65px 0;
+}
+.fade{
+  opacity:1;
+}

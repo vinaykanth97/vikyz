@@ -1,0 +1,88 @@
+/* variable */
+ $n0: 0;
+ $n1: 0.071rem;
+ $n2: 0.143rem;
+ $n3: 0.214rem;
+ $n4: 0.286rem;
+ $n5: 0.357rem;
+ $n6: 0.429rem;
+ $n7: 0.500rem;
+ $n8: 0.571rem;
+ $n10: 0.714rem;
+ $n15: 1.071rem;
+ $n18: 1.286rem;
+ $n20: 1.429rem;
+ $n25: 1.786rem;
+ $n30: 2.143rem;
+ $n35: 2.188rem;
+ $n40: 2.688rem;
+ $n45: 3.214rem;
+ $n50: 3.571rem;
+ $n55: 3.929rem;
+ $n60: 3.625rem;
+ $n70: 4.500rem;
+ $n80: 5.714rem;
+
+/* margin */
+ $m0auto: $n0 auto;
+ $mauto0: auto $n0;
+
+/* position */
+ $st: static;
+ $re: relative;
+ $ab: absolute;
+ $fix: fixed;
+
+/* left right */
+ $left: left;
+ $right: right;
+ $center: center;
+ $auto: auto;
+
+/* font */
+//  $base-font-family: 'Roboto', sans-serif;
+
+ $f1:1rem;
+ $f11:1.1rem;
+ $f12:1.2rem;
+ $f13:1.3rem;
+ $f14:1.4rem;
+ $f15:1.5rem;
+ $f16:1.6rem;
+ $f17:1.7rem;
+ $f18:1.8rem;
+ $f19:1.9rem;
+ $f20:2rem;
+
+/*** text color starts ***/
+$txt-clrblack:#000;
+/*** text color ends ***/
+
+$full-width:100%;
+
+/* display */
+$block: block;
+$none: none;
+$inline: inline;
+
+$text-upper: uppercase;
+$text-lower: lowercase;
+$text-capital: capitalize; 
+
+/* media */
+$ipad: 1200px;
+$tab: max-width 991px;
+$mobile: max-width 767px;
+$iphone: max-width 480px;
+
+
+
+/*Fonts*/
+$font-base:'Lato', sans-serif;
+$basetext:#636363;
+$white:#fff;
+$black: #000;
+$blue:#008FD4;
+$dgray: #404040;
+
+

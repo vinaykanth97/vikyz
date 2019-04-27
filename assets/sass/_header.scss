@@ -1,0 +1,33 @@
+.header{
+    .deskheader{
+        padding: 3.7em 0.9375rem;
+        max-width: 80vw;
+        margin: 0 auto;
+        img{
+            width: 6.5rem;
+        }
+        .scale{
+            display: flex;
+            align-items: center;
+        }
+        ul{
+            margin: 0;
+            li{
+                padding-left: 1.7571rem;
+                a{
+                    &:hover{
+                        border-bottom: 1px solid #f47923;
+                        padding-bottom: 0.5rem; 
+                      }
+                }
+            }
+        }
+        .search{
+            border-radius: 2rem;
+            border: 1px solid #3b3b3b;
+            width: 170px;
+            height: 30px;
+            padding: 0 0.8em;
+        }
+    }
+}

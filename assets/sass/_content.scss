@@ -1,0 +1,189 @@
+.top-info {
+  position: relative;
+  h1 {
+      margin: 0;
+      padding-bottom: 102px;
+  }
+  .social-links {
+      margin-top: 3rem;
+      display: inline-block;
+      position: absolute;
+      bottom: -1rem;
+      p {
+          transform: rotate(-90deg);
+          display: none;
+          small {
+              color: #b2b3b6;
+              span {
+                  font-weight: bolder;
+                  color: #3b3b3b;
+              }
+          }
+      }
+  }
+  .init {
+      margin: 0;
+  }
+  .mt-6 {
+      margin-bottom: 68px;
+      position: relative;
+      &::before {
+          border: 1px solid #3b3b3b;
+          content: "";
+          position: absolute;
+          height: 64px;
+          top: 6px;
+      }
+      small {
+          padding-left: 28px;
+          display: inline-block;
+          line-height: 1.6;
+      }
+      & + h2 {
+          border-bottom: 1.4px solid #f47923;
+          width: 32%;
+          padding-bottom: 0.4rem;
+          margin: 0;
+      }
+  }
+  .social-links > a:hover > p.insta {
+      display: block;
+      left: -1.8em;
+      top: -46%;
+      position: absolute;
+      animation-name: social;
+      animation-duration: 1s;
+      transition: 1ms;
+  }
+  @keyframes social {
+      0% {
+          transition: all ease .2s;
+          opacity: 0;
+      }
+      100% {
+          transition: all ease .2s;
+          opacity: 1;
+      }
+  }
+  .social-links > a:hover > p.yt {
+      left: -2.3em;
+      top: -46%;
+      position: absolute;
+      display: block;
+      transition: all ease 4s;
+      animation-name: social;
+      animation-duration: 1s;
+  }
+  .social-links > a:hover > p.fb {
+      left: -2.5em;
+      top: -46%;
+      position: absolute;
+      display: block;
+      transition: all ease 4s;
+      animation-name: social;
+      animation-duration: 1s;
+  }
+  figure {
+      background: #000;
+      width: 2rem;
+      height: 2rem;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 1em 0;
+  }
+  .social-media {
+      float: left;
+      width: 11.633333%;
+  }
+  .Design {
+      h2 {
+          color: #b2b3b6;
+          text-transform: uppercase;
+          padding-right: 9rem;
+          padding-bottom: 1.9rem;
+      }
+  }
+  .slick-dots li button:before {
+      font-size: 58px;
+      content: "_";
+      color: #3b3b3b;
+      opacity: 1;
+  }
+  .slick-dots {
+      bottom: -2px;
+      left: 14%;
+  }
+  .slick-dots li.slick-active button:before {
+      color: #f47923;
+  }
+  .slick-dots li {
+      margin: 0 10px;
+  }
+}
+/*Filter*/
+.filters{
+  .nav{
+    display: flex;
+    justify-content: center;
+    li{
+      padding: 2rem;
+      &.active{
+        a{
+        border-bottom:1px solid #f47923;
+        padding-bottom: 0.3em;
+        }
+      }
+    }
+  }
+  .masonary{
+    display: grid;
+    grid-template-columns: 30% 35% 32.9%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+   
+    .hov-it{
+      position: relative;
+      cursor: pointer;  
+      overflow: hidden;
+      margin-bottom:10px;
+    img{
+      transition: 0.7s all ease-in-out;
+    }
+      p{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &:hover{
+     p{
+      opacity:1;
+       color:#000;
+     }
+     img{
+      opacity: 0.3;
+      transform: scale(1.2);
+      animation-duration: 4s;
+      
+     }
+      }
+    }
+  }
+}
+.hov-it:hover p{
+  animation-name: hover-eff;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes hover-eff{
+  0%{left:70%;}
+  100%{left:0%;}
+}
+/*Filter*/
